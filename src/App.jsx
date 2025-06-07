@@ -24,7 +24,7 @@ function App() {
 	React.useEffect(() => {
 		async function fetchData() {
 			try {
-				const [cartResponce, favoriteResponce, itemsResponce] = await Promise.all([
+				const [cartResponce, favoriteResponce, itemsResponce] = await new Promise.all([
 					axios.get(`${json.mockapi_1}/cart`),
 					axios.get(`${json.mockapi_2}/Favorites`),
 					axios.get(`${json.mockapi_1}/items`),
